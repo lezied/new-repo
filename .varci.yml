@@ -1,0 +1,9 @@
+ruleset:
+
+  close:
+  
+    name: Close issues
+    events: [ issues ]
+    when:
+      - action = "opened"
+    close: true
