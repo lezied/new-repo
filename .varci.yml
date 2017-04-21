@@ -12,6 +12,9 @@ ruleset:
 
     name: Allow issue/PR creator to reopen issues
     events: [ issue_comment ]
-    when:
+    #when:
       #- issue.user.login = comment.user.login
-      - comment.body contains '/reopen'
+      #- comment.body contains '/reopen'
+    comment:
+      issue: {{issue}}
+      comment: {{comment}}
